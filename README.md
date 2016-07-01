@@ -1,4 +1,4 @@
-# WordPress Bootstrap Navigation Wakler
+# WordPress Bootstrap Navigation Walker
 
 Simeple navigation walker for Wordpress themes using twitter's bootstrap.
 
