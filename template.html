@@ -1,0 +1,46 @@
+<!-- Menu -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="top-main-menu">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="navbar-toggled-title visible-xs float-right"><?php printf(__('Menu')) ?></span>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<?php
+					if(has_nav_menu('main-menu')) {
+						// custom menu
+						wp_nav_menu(array(
+							'menu' => '',
+							'theme_location' => 'main-menu',
+							'depth' => 3,
+							'container' => false,
+							'menu_class' => 'nav navbar-nav',
+							'fallback_cb' => 'WpBootstrapMenuWalker::fallback',
+							'walker' => new WpBootstrapMenuWalker()
+						));
+					} else {
+						// automatically generated menu
+						wp_nav_menu(array(
+							'menu' => '',
+							'theme_location' => 'main-menu',
+							'depth' => 3,
+							'container' => 'ul',
+							'menu_class' => 'nav navbar-nav'
+						));
+					}
+					?>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div><!-- /.top-main-menu -->
+	</div>
+</div>

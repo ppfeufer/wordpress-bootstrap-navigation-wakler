@@ -1,2 +1,5 @@
-# wordpress-bootstrap-navigation-wakler
-WordPress Nav-Walker for themes using bootstrap
+# WordPress Bootstrap Navigation Wakler
+
+Simeple navigation walker for Wordpress themes using twitter's bootstrap.
+
+Also fixes the limitation to only one level for submenus that bootstrap has.
