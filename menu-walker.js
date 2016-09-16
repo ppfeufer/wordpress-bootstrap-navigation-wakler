@@ -17,7 +17,7 @@ jQuery(function($) {
 		$(this).find('>ul.children').addClass('dropdown-menu multi-level');
 
 		// 2nd Level and maybe more?
-		$(this).find('>ul.children li.page_item_has_children').addClass('dropdown-submenu')
+		$(this).find('>ul.children li.page_item_has_children').addClass('dropdown-submenu');
 		$(this).find('>ul.children ul').addClass('dropdown-menu');
 	});
 });
